@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fricken - Pedido Online</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🍗 Fricken</h1>
+    <p>Haz tu pedido rápido y fácil</p>
+  </header>
+
+  <main>
+    <section class="menu" id="menu">
+      <!-- Los platos se generan aquí con JS -->
+    </section>
+
+    <section class="formulario">
+      <h2>Datos del cliente</h2>
+      <input type="text" id="nombre" placeholder="Nombre y Apellido">
+      <input type="text" id="telefono" placeholder="Número de contacto">
+      <input type="text" id="direccion" placeholder="Dirección">
+      <input type="text" id="pago" placeholder="Forma de pago">
+      <button onclick="enviarPedido()">Enviar pedido por WhatsApp</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
