@@ -1,62 +1,101 @@
 
 body {
   font-family: sans-serif;
-  background-color: #fff7f0;
-  color: #333;
   margin: 0;
+  background: #fff;
 }
 
 header {
-  background-color: #E43B24;
+  background: #E43B24;
   color: white;
-  padding: 20px;
   text-align: center;
+  padding: 1rem;
 }
 
-.menu {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  padding: 20px;
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background: #f5f5f5;
+  flex-wrap: wrap;
 }
 
-.plato {
+nav button {
   background: #F7CE02;
-  padding: 15px;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  border: 1px solid #ddd;
   border-radius: 10px;
-  text-align: center;
-  color: #222;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.plato h3 {
-  margin-top: 0;
+.card img {
+  width: 100%;
+  height: auto;
 }
 
-.plato button {
+.card-content {
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.card .precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #E43B24;
+}
+
+.card button {
   background: #E43B24;
   color: white;
   border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.formulario {
-  padding: 20px;
-}
-
-.formulario input {
-  display: block;
-  margin: 10px 0;
   padding: 10px;
-  width: 100%;
-  max-width: 400px;
+  cursor: pointer;
+  border-radius: 0 0 10px 10px;
+  font-weight: bold;
 }
 
-.formulario button {
-  background-color: #E43B24;
+.carrito {
+  background: #f0f0f0;
+  padding: 1rem;
+}
+
+.carrito ul {
+  list-style: none;
+  padding: 0;
+}
+
+.carrito button {
+  margin-top: 10px;
+  background: #E43B24;
   color: white;
-  padding: 12px 20px;
+  padding: 10px;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
 }

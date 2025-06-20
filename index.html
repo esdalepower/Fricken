@@ -4,28 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Fricken - Pedido Online</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>🍗 Fricken</h1>
-    <p>Haz tu pedido rápido y fácil</p>
+    <h1>Fricken 🍗</h1>
   </header>
 
-  <main>
-    <section class="menu" id="menu">
-      <!-- Los platos se generan aquí con JS -->
-    </section>
+  <nav>
+    <button onclick="filtrar('promos')">Promociones</button>
+    <button onclick="filtrar('combos')">Combos</button>
+    <button onclick="filtrar('entradas')">Entradas</button>
+    <button onclick="verCarrito()">🛒 Ver Pedido</button>
+  </nav>
 
-    <section class="formulario">
-      <h2>Datos del cliente</h2>
-      <input type="text" id="nombre" placeholder="Nombre y Apellido">
-      <input type="text" id="telefono" placeholder="Número de contacto">
-      <input type="text" id="direccion" placeholder="Dirección">
-      <input type="text" id="pago" placeholder="Forma de pago">
-      <button onclick="enviarPedido()">Enviar pedido por WhatsApp</button>
-    </section>
-  </main>
+  <main id="productos"></main>
+
+  <section class="carrito" id="carrito" style="display:none;">
+    <h2>🧾 Tu Pedido</h2>
+    <ul id="lista-carrito"></ul>
+    <button onclick="enviarPedido()">Enviar por WhatsApp</button>
+    <button onclick="cerrarCarrito()">Cerrar</button>
+  </section>
 
   <script src="script.js"></script>
 </body>
